@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(241, 233, 241);
+      }
+      button {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        border: none;
+        border-radius: 20px;
+        background-color: rgb(235, 210, 248);
+        cursor: pointer;
+        box-shadow: 0 4px 10px  rgba(0,0,0,0.15);
+      }
+      #row1 {
+        display: flex;
+        gap: 25px;
+        margin-bottom: 30px;
+      }
+      #row2 {
+        display: flex;
+        gap: 90px;
+        margin-bottom: 15px;
+      }
+      #container p {
+        margin: 5px 0;
+      }
+      #container {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      header {
+        height: 80px;
+        background-color: rgb(235, 210, 248);
+        display: flex;
+        align-items: center;
+      }
+      header h1 {
+        margin-left: 20px;
+        font-size: 28px;
+        font-weight: normal;
+      }
+      p{
+        font-size: larger;
+      }
+      #szam{
+        font-size:x-large;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Counter</h1>
+    </header>
+    <div id="container">
+      <p id="label">Counter value:</p>
+      <p id="szam">0</p>
+      <div id="row1">
+        <button onclick="kivonas()">-</button>
+        <button onclick="hozzaad()">+</button>
+      </div>
+      <div id="row2">
+        <button onclick="kivonas10()">-10</button>
+        <button onclick="hozzaad10()">+10</button>
+      </div>
+    </div>
+    <script>
+      const hozzaad = () => {
+        const szam = document.getElementById("szam");
+        szam.textContent = parseInt(szam.textContent) + 1;
+      };
+      const kivonas = () => {
+        const szam = document.getElementById("szam");
+        szam.textContent = parseInt(szam.textContent) - 1;
+      };
+      const hozzaad10 = () => {
+        const szam = document.getElementById("szam");
+        szam.textContent = parseInt(szam.textContent) + 10;
+      };
+      const kivonas10 = () => {
+        const szam = document.getElementById("szam");
+        szam.textContent = parseInt(szam.textContent) - 10;
+      };
+    </script>
+  </body>
+</html>
